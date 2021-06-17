@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Credit Card Fraud Detection </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="../static/css/index.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container register-form">
+        <div class="heading">
+            <p>CREDIT CARD FRAUD DETECTION</p>
+        </div>
+        <div class="form-content">
+            <form class="row" action="/detect" method="post">
+                <div class="col-md-12">
+                    <input type="number" name="card_number" placeholder="Enter credit card number" required />
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="card_holder_name" placeholder="Enter card holder name" />
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="dob" placeholder="Enter date of birth" onfocus="(this.type='date')"
+                        required />
+                </div>
+                <div class="col-md-6">
+                    <select name="state" required>
+                        <option selected disabled value="">Select state</option>
+                        <option value="0">Alaska</option>
+                        <option value="1">Alabama</option>
+                        <option value="2">Arkansas</option>
+                        <option value="3">Arizona</option>
+                        <option value="4">California</option>
+                        <option value="5">Colorado</option>
+                        <option value="6">Connecticot</option>
+                        <option value="7">District of Columbia</option>
+                        <option value="8">Delaware</option>
+                        <option value="9">Florida</option>
+                        <option value="10">Georgia</option>
+                        <option value="11">Hawaii</option>
+                        <option value="12">Iowa</option>
+                        <option value="13">Idaho</option>
+                        <option value="14">Illinois</option>
+                        <option value="15">Indiana</option>
+                        <option value="16">Kansas</option>
+                        <option value="17">Kentucky</option>
+                        <option value="18">Louisiana</option>
+                        <option value="19">Massachusetts</option>
+                        <option value="20">Maryland</option>
+                        <option value="21">Maine</option>
+                        <option value="22">Michigan</option>
+                        <option value="23">Minnesota</option>
+                        <option value="24">Missouri</option>
+                        <option value="25">Mississippi</option>
+                        <option value="26">Montana</option>
+                        <option value="27">North Carolina</option>
+                        <option value="28">North Dakota</option>
+                        <option value="29">Nebraska</option>
+                        <option value="30">New Hampshire</option>
+                        <option value="31">New Jersey</option>
+                        <option value="32">New Mexico</option>
+                        <option value="33">Nevada</option>
+                        <option value="34">New York</option>
+                        <option value="35">Ohio</option>
+                        <option value="36">Oklahola</option>
+                        <option value="37">Oregon</option>
+                        <option value="38">Pennsylvania</option>
+                        <option value="39">Rhode Island</option>
+                        <option value="40">South Carolina</option>
+                        <option value="41">South Dacota</option>
+                        <option value="42">Tennessee</option>
+                        <option value="43">Texas</option>
+                        <option value="44">Utah</option>
+                        <option value="45">Virginia</option>
+                        <option value="46">Vermont</option>
+                        <option value="47">Washington</option>
+                        <option value="48">Wisconsin</option>
+                        <option value="49">West Virginia</option>
+                        <option value="50">Wyoming</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <input type="number" name="zip" placeholder="Enter zip code" required />
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="trans_datetime" placeholder="Enter the date and time of transaction"
+                        onfocus="(this.type='datetime-local')" required />
+                </div>
+                <div class="col-md-6">
+                    <input type="number" name="trans_amount" placeholder="Enter transaction amount ($)" required />
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="merchant" placeholder="Enter merchant name" />
+                </div>
+                <div class="col-md-6">
+                    <select name="category" required>
+                        <option selected disabled value="">Select merchant category</option>
+                        <option value="0">Entertainment</option>
+                        <option value="1">Food Dining</option>
+                        <option value="2">Gas Transport</option>
+                        <option value="3">Grocery NET</option>
+                        <option value="4">Grocery POS</option>
+                        <option value="5">Health Fitness</option>
+                        <option value="6">Home</option>
+                        <option value="7">Kids Pets</option>
+                        <option value="8">Miscellaneous NET</option>
+                        <option value="9">Miscellaneous POS</option>
+                        <option value="10">Personal Care</option>
+                        <option value="11">Shopping NET</option>
+                        <option value="12">Shopping POS</option>
+                        <option value="13">Travel</option>
+                    </select>
+                </div>
+                <div id="btn" class="col">
+                    <button type="submit" class="btnSubmit">Click to Detect</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
